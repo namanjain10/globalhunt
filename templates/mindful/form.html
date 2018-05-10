@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Mindful</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+}
+</head>
+<body>
+    <div class="container">
+        {% block content %}
+        <form class="formClass" id="first" method="post">
+            {% csrf_token %}
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>CanId</label>
+                    <input class="form-control" name="canId" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Aadhar Card No.</label>
+                    <input class="form-control" name="aadharCardNo" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Age</label>
+                    <input class="form-control" name="age" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label for="fna">Area of Specialization</label>
+                    <input class="form-control" name="area_of_specialization" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label for="fna">First Name</label>
+                    <input class="form-control"   name="first_name" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Last Name</label>
+                    <input class="form-control"   name="last_name" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Candidate Name</label>
+                    <input class="form-control"   name="candidate_name" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Category</label>
+                    <input class="form-control"   name="category" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Communication Rating</label>
+                    <input class="form-control"   name="communicationrating" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Confidential</label>
+                    <input class="form-control"   name="confidential" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Created Date</label>
+                    <input class="form-control"   name="createdDate" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Created Userid</label>
+                    <input class="form-control"   name="createdUserID" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Created By</label>
+                    <input class="form-control"   name="createdBy" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Dob</label>
+                    <input class="form-control"   name="dob" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Summary</label>
+                    <input class="form-control"   name="summary" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Emp status c</label>
+                    <input class="form-control"   name="emp_status_c" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Ex-Nationality</label>
+                    <input class="form-control"   name="exNationality" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Fedrated</label>
+                    <input class="form-control"   name="fedrated" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Function text</label>
+                    <input class="form-control"   name="functionText" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Gender</label>
+                    <input class="form-control"   name="gender" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Hotnotes</label>
+                    <input class="form-control"   name="hotNotes" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Summary</label>
+                    <input class="form-control"   name="hourly_rate" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Hourly rate</label>
+                    <input class="form-control"   name="imageName" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Image Name</label>
+                    <input class="form-control"   name="imgPhoto" type="text" />
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label for="headline">Img photo</label>
+                    <input class="form-control" id="headline" name="imgPhoto" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ui-widget">
+                    <label for="industry">Industry Text</label>
+                    <input class="form-control" name="industryText" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ui-widget">
+                    <label for="function">Job description</label>
+                    <input class="form-control" name="job_description"  type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ui-widget">
+                    <label for="Skill1">Job type</label>
+                    <input class="form-control" type="text" name="job_type">
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Language</label>
+                    <input class="form-control" name="language" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Lastmodifieduserid</label>
+                    <input class="form-control" name="lastModifiedUserID" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Modifiedby</label>
+                    <input class="form-control"   name="modifiedby" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Lastupdatedate</label>
+                    <input class="form-control"   name="lastUpdateDate" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Mobile</label>
+                    <input class="form-control"   name="mobile" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Nationality C</label>
+                    <input class="form-control"   name="nationality_c" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Notes</label>
+                    <input class="form-control"   name="notes" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Noticeperiod</label>
+                    <input class="form-control"   name="noticePeriod" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Officeph</label>
+                    <input class="form-control"   name="officePh" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Officephext</label>
+                    <input class="form-control"   name="officePhExt" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Pan no</label>
+                    <input class="form-control"   name="pANNo" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Passport no</label>
+                    <input class="form-control"   name="passportNo" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Passport validity</label>
+                    <input class="form-control"   name="passportValidity" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Perfer location</label>
+                    <input class="form-control"   name="perferLocation" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Phone h</label>
+                    <input class="form-control"   name="phoneH" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Differently abled</label>
+                    <input class="form-control"   name="differentlyAbled" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Differently abled type</label>
+                    <input class="form-control"   name="differentlyAbled_type" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Phychallenged</label>
+                    <input class="form-control"   name="phychallenged" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Pref distance</label>
+                    <input class="form-control"   name="pref_distance" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Reason change</label>
+                    <input class="form-control"   name="reason_change" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Reason relocate</label>
+                    <input class="form-control"   name="reason_relocate" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>References 1</label>
+                    <input class="form-control"   name="references_1" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>References 2</label>
+                    <input class="form-control"   name="references_2" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Releventexp</label>
+                    <input class="form-control"   name="releventExp" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Relocate</label>
+                    <input class="form-control"   name="relocate" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Res headline</label>
+                    <input class="form-control"   name="res_headline" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Searchsheet</label>
+                    <input class="form-control"   name="searchsheet" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Shift work</label>
+                    <input class="form-control"   name="shift_work" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Sll number</label>
+                    <input class="form-control"   name="sLL_Number" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Source</label>
+                    <input class="form-control"   name="source" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Subfunctiontext</label>
+                    <input class="form-control"   name="subFunctionText" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Sub-industry text</label>
+                    <input class="form-control"   name="subIndustryText" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Willing to relocate</label>
+                    <input class="form-control"   name="willing_to_relocate" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Willing to change job</label>
+                    <input class="form-control"   name="willingToChangeJob" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Working from</label>
+                    <input class="form-control"   name="workingFrom" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Original filename</label>
+                    <input class="form-control"   name="originalFileName" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Modifiedfilename</label>
+                    <input class="form-control"   name="modifiedFileName" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Resume</label>
+                    <input class="form-control"   name="resume" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Fresher</label>
+                    <input class="form-control"   name="fresher" type="text" />
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Primary</label>
+                    <input class="form-control"   name="email@primary" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Secondary</label>
+                    <input class="form-control"   name="email@secondary" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Third</label>
+                    <input class="form-control"   name="email@third" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Fourth</label>
+                    <input class="form-control"   name="email@fourth" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Fifth</label>
+                    <input class="form-control"   name="email@fifth" type="text" />
+                </div>
+            </div>
+
+
+                <div class="col-sm-6">
+                    <div class="form-group ">
+                        <label>Lastused</label>
+                        <input class="form-control"   name="skill@skills@lastUsed" type="text" />
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group ">
+                        <label>Expirence</label>
+                        <input class="form-control"   name="skill@skills@expirence" type="text" />
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group ">
+                        <label>Text</label>
+                        <input class="form-control"   name="skill@skills@text" type="text" />
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="form-group ">
+                        <label>Lastused</label>
+                        <input class="form-control"   name="skill@one@lastUsed" type="text" />
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group ">
+                        <label>Expirence</label>
+                        <input class="form-control"   name="skill@one@expirence" type="text" />
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group ">
+                        <label>Text</label>
+                        <input class="form-control"   name="skill@one@text" type="text" />
+                    </div>
+                </div>
+
+
+                <div class="col-sm-6">
+                    <div class="form-group ">
+                        <label>Lastused</label>
+                        <input class="form-control"   name="skill@two@lastUsed" type="text" />
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group ">
+                        <label>Expirence</label>
+                        <input class="form-control"   name="skill@two@expirence" type="text" />
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group ">
+                        <label>Text</label>
+                        <input class="form-control"   name="skill@two@text" type="text" />
+                    </div>
+                </div>
+
+
+                <div class="col-sm-6">
+                    <div class="form-group ">
+                        <label>Lastused</label>
+                        <input class="form-control"   name="skill@three@lastUsed" type="text" />
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group ">
+                        <label>Expirence</label>
+                        <input class="form-control"   name="skill@three@expirence" type="text" />
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group ">
+                        <label>Text</label>
+                        <input class="form-control"   name="skill@three@text" type="text" />
+                    </div>
+                </div>
+
+
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Lastused</label>
+                    <input class="form-control"   name="skill@four@lastUsed" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Expirence</label>
+                    <input class="form-control"   name="skill@four@expirence" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Text</label>
+                    <input class="form-control"   name="skill@four@text" type="text" />
+                </div>
+            </div>
+
+
+
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Lastused</label>
+                    <input class="form-control"   name="skill@five@lastUsed" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Expirence</label>
+                    <input class="form-control"   name="skill@five@expirence" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Text</label>
+                    <input class="form-control"   name="skill@five@text" type="text" />
+                </div>
+            </div>
+
+
+
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Country</label>
+                    <input class="form-control"   name="address@permanentAddress@country" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>City</label>
+                    <input class="form-control"   name="address@permanentAddress@city" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Street</label>
+                    <input class="form-control"   name="address@permanentAddress@street" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Location</label>
+                    <input class="form-control"   name="address@permanentAddress@location" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>State</label>
+                    <input class="form-control"   name="address@permanentAddress@state" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Pincode</label>
+                    <input class="form-control"   name="address@permanentAddress@pincode" type="text" />
+                </div>
+            </div>
+
+
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Country</label>
+                    <input class="form-control"   name="address@currentAddress@country" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>City</label>
+                    <input class="form-control"   name="address@currentAddress@city" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Street</label>
+                    <input class="form-control"   name="address@currentAddress@street" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Location</label>
+                    <input class="form-control"   name="address@currentAddress@location" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>State</label>
+                    <input class="form-control"   name="address@currentAddress@state" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Pincode</label>
+                    <input class="form-control"   name="address@currentAddress@pincode" type="text" />
+                </div>
+            </div>
+
+
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Degree</label>
+                    <input class="form-control"   name="education@ug@degree" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Degree type</label>
+                    <input class="form-control"   name="education@ug@degree_type" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Course</label>
+                    <input class="form-control"   name="education@ug@course" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Institute</label>
+                    <input class="form-control"   name="education@ug@institute" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>University</label>
+                    <input class="form-control"   name="education@ug@university" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Ug from</label>
+                    <input class="form-control"   name="education@ug@from_where" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Ug to</label>
+                    <input class="form-control"   name="education@ug@to" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Year</label>
+                    <input class="form-control"   name="education@ug@year" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Percentage</label>
+                    <input class="form-control"   name="education@ug@percentage" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Edudetails</label>
+                    <input class="form-control"   name="education@ug@eduDetails" type="text" />
+                </div>
+            </div>
+
+
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Degree</label>
+                    <input class="form-control"   name="education@pg@degree" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Degree type</label>
+                    <input class="form-control"   name="education@pg@degree_type" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Course</label>
+                    <input class="form-control"   name="education@pg@course" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Institute</label>
+                    <input class="form-control"   name="education@pg@institute" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>University</label>
+                    <input class="form-control"   name="education@pg@university" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Pg from</label>
+                    <input class="form-control"   name="education@pg@from_where" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Pg to</label>
+                    <input class="form-control"   name="education@pg@to" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Year</label>
+                    <input class="form-control"   name="education@pg@year" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Percentage</label>
+                    <input class="form-control"   name="education@pg@percentage" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Edudetails</label>
+                    <input class="form-control"   name="education@pg@eduDetails" type="text" />
+                </div>
+            </div>
+
+
+
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Year</label>
+                    <input class="form-control"   name="education@doctorate@year" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Percentage</label>
+                    <input class="form-control"   name="education@doctorate@percentage" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Course</label>
+                    <input class="form-control"   name="education@doctorate@course" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Institute</label>
+                    <input class="form-control"   name="education@doctorate@institute" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Edudetails</label>
+                    <input class="form-control"   name="education@doctorate@eduDetails" type="text" />
+                </div>
+            </div>
+
+
+
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>School</label>
+                    <input class="form-control"   name="education@tength@school" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Specification</label>
+                    <input class="form-control"   name="education@tength@specification" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>City</label>
+                    <input class="form-control"   name="education@tength@city" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Board</label>
+                    <input class="form-control"   name="education@tength@board" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Tength from</label>
+                    <input class="form-control"   name="education@tength@from_where" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Tength to</label>
+                    <input class="form-control"   name="education@tength@to" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Year</label>
+                    <input class="form-control"   name="education@tength@year" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Percentage</label>
+                    <input class="form-control"   name="education@tength@percentage" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Edudetails</label>
+                    <input class="form-control"   name="education@tength@eduDetails" type="text" />
+                </div>
+            </div>
+
+
+
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Year</label>
+                    <input class="form-control"   name="education@diploma@year" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Percentage</label>
+                    <input class="form-control"   name="education@diploma@percentage" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Course</label>
+                    <input class="form-control"   name="education@diploma@course" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Institute</label>
+                    <input class="form-control"   name="education@diploma@institute" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Edudetails</label>
+                    <input class="form-control"   name="education@diploma@eduDetails" type="text" />
+                </div>
+            </div>
+
+
+
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>School</label>
+                    <input class="form-control"   name="education@twelveth@school" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Specification</label>
+                    <input class="form-control"   name="education@twelveth@specification" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>City</label>
+                    <input class="form-control"   name="education@twelveth@city" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Board</label>
+                    <input class="form-control"   name="education@twelveth@board" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>twelveth from</label>
+                    <input class="form-control"   name="education@twelveth@from_where" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>twelveth to</label>
+                    <input class="form-control"   name="education@twelveth@to" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Year</label>
+                    <input class="form-control"   name="education@twelveth@year" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Percentage</label>
+                    <input class="form-control"   name="education@twelveth@percentage" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Edudetails</label>
+                    <input class="form-control"   name="education@twelveth@eduDetails" type="text" />
+                </div>
+            </div>
+
+
+
+
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Certificates title</label>
+                    <input class="form-control"   name="education@certificates@certificates_title" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Certificates from</label>
+                    <input class="form-control"   name="education@certificates@certificates_from" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Certificates to</label>
+                    <input class="form-control"   name="education@certificates@certificates_to" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Certificates description</label>
+                    <input class="form-control"   name="education@certificates@certificates_description" type="text" />
+                </div>
+            </div>
+
+
+
+
+
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Worklocation</label>
+                    <input class="form-control"   name="employment@current@workLocation" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Role</label>
+                    <input class="form-control"   name="employment@current@role" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Level</label>
+                    <input class="form-control"   name="employment@current@level" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Teamsize</label>
+                    <input class="form-control"   name="employment@current@teamSize" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Organization</label>
+                    <input class="form-control"   name="employment@current@organization" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Designation</label>
+                    <input class="form-control"   name="employment@current@designation" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Current city</label>
+                    <input class="form-control"   name="employment@current@current_city" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Current from</label>
+                    <input class="form-control"   name="employment@current@current_from" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Present date</label>
+                    <input class="form-control"   name="employment@current@present_date" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Current description</label>
+                    <input class="form-control"   name="employment@current@current_description" type="text" />
+                </div>
+            </div>
+
+
+
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Organization1</label>
+                    <input class="form-control"   name="employment@previous@organization1" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Organization</label>
+                    <input class="form-control"   name="employment@previous@organization" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Organization2</label>
+                    <input class="form-control"   name="employment@previous@organization2" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Organization3</label>
+                    <input class="form-control"   name="employment@previous@organization3" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Organization4</label>
+                    <input class="form-control"   name="employment@previous@organization4" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Designation</label>
+                    <input class="form-control"   name="employment@previous@designation" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Previous city</label>
+                    <input class="form-control"   name="employment@previous@previous_city" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Previous from</label>
+                    <input class="form-control"   name="employment@previous@previous_from" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Previous to</label>
+                    <input class="form-control"   name="employment@previous@previous_to" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Previous description</label>
+                    <input class="form-control"   name="employment@previous@previous_description" type="text" />
+                </div>
+            </div>
+
+
+
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Achievement title</label>
+                    <input class="form-control"   name="employment@achievement@achievement_title" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Achievement from</label>
+                    <input class="form-control"   name="employment@achievement@achievement_from" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Achievement to</label>
+                    <input class="form-control"   name="employment@achievement@achievement_to" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Achievement description</label>
+                    <input class="form-control"   name="employment@achievement@achievement_description" type="text" />
+                </div>
+            </div>
+
+
+
+
+
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Months</label>
+                    <input class="form-control" name="experience@months" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Totalexp</label>
+                    <input class="form-control"   name="experience@TotalExp" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Years</label>
+                    <input class="form-control"   name="experience@years" type="text" />
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Negotiablectc</label>
+                    <input class="form-control"   name="salary@negotiableCTC" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Presentctc</label>
+                    <input class="form-control"   name="salary@presentCTC" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Type</label>
+                    <input class="form-control"   name="salary@type_of" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Expectedctc</label>
+                    <input class="form-control"   name="salary@expectedCTC" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Presentctc type</label>
+                    <input class="form-control"   name="salary@presentCTC_type" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Expectedctc type</label>
+                    <input class="form-control"   name="salary@expectedCTC_type" type="text" />
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Project title</label>
+                    <input class="form-control"   name="project@project_title" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Project role</label>
+                    <input class="form-control"   name="project@project_role" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Project from</label>
+                    <input class="form-control"   name="project@project_from" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Project to</label>
+                    <input class="form-control"   name="project@project_to" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Url</label>
+                    <input class="form-control"   name="project@url" type="text" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group ">
+                    <label>Project description</label>
+                    <input class="form-control"   name="project@project_description" type="text" />
+                </div>
+            </div>
+
+                <div class="col-sm-12 col-xs-12">
+                    <div class="pull-right prof2Btn">
+                        <button class="profile-frm-cancel" id="btn-cancel-perma">Cancel</button>
+                        <button class="profile-frm-grey m-l-15 profView1" id="btn-save-perma" onclick="submitForms()">Save</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        {% endblock content %}
+    </div>
+</body>
