@@ -38,8 +38,17 @@ class form (View) :
                         dic[s[0]][s[1]][s[2]] = data[d]
 
         del(dic['csrfmiddlewaretoken'])
-        auth_url  = 'http://awsdev.globalhuntindia.com/Candi/Post/'
+        auth_url  = 'http://awsdev.globalhuntindia.com/Candi/'
         headers = {'content-type':'application/json'}
         r = requests.post(auth_url, headers=headers, data= dumps(dic))
-        print (r)
-        return render(request, 'mindful/submit.html')
+        if r.status_code == 201 :
+            return render(request, 'mindful/submit.html')
+            
+        # print ('json : ', r.json)
+        # print ('links : ', r.links)
+        # print ('next : ', r.next)
+        # print ('url : ', r.url)
+        # print ('raw : ', r.raw)
+        # print ('text : ', r.text)
+
+        return render(request, r.text)
